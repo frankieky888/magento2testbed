@@ -1,5 +1,5 @@
 <?php
-namespace goldcoin\helloworldmodule\Controller\Index;
+namespace goldcoin\helloworld\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
