@@ -20,7 +20,7 @@ class InstallSchema implements InstallSchemaInterface{
                 ['identity'=>true,'nullable'=>false,'primary'=>true]
         )->addColumn(
                 'name', 
-                Table::TYPE_INTEGER,
+                Table::TYPE_TEXT,
                 255,
                 ['nullable'=>false],
                 'Item Name'      

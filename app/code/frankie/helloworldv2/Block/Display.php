@@ -1,8 +1,8 @@
 <?php
 namespace Frankie\helloworldv2\Block;
 use Magento\Framework\View\Element\Template;
-use Frankie\helloworldv2\Model\ResourceModel\Item\Collection;
-use Frankie\helloworldv2\Model\ResourceModel\Item\CollectionFactory;
+use frankie\helloworldv2\Model\ResourceModel\Item\Collection;
+use frankie\helloworldv2\Model\ResourceModel\Item\CollectionFactory;
 
 
 class Display extends Template{
@@ -14,7 +14,7 @@ class Display extends Template{
     ){
 
         $this->collectionFactory = collectionFactory;
-        parent::__construct($context,$data)
+        parent::__construct($context,$data);
 
     }
 
@@ -23,7 +23,7 @@ class Display extends Template{
     **/
     public function getItems(){
 
-    return $this->collectionFactory->create()->getItems();
+        return $this->collectionFactory->create()->getItems();
 
     }
 
