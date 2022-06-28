@@ -1,6 +1,6 @@
 <?php
-namespace goldcoin\helloworld\Controller\Index;
-
+namespace frankie\helloworldv2\Controller\Index;
+use Magento\Framework\Controller\ResultFactory;
 class Index extends \Magento\Framework\App\Action\Action
 {
 	protected $_pageFactory;
@@ -15,7 +15,10 @@ class Index extends \Magento\Framework\App\Action\Action
 
 	public function execute()
 	{
-		echo "Hello World";
+                $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
+                $result->setContents('Hello world!');
+                return $result;
+
 		
 	}
 }
