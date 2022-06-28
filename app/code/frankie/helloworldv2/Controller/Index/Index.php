@@ -15,8 +15,7 @@ class Index extends \Magento\Framework\App\Action\Action
 
 	public function execute()
 	{
-                $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
-                $result->setContents('Hello world!');
+                $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
                 return $result;
 
 		
