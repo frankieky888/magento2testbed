@@ -8,21 +8,21 @@ class InstallData implements InstallSchemaInterface{
 
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context){
         $setup->startSetup();
+        if(version_compare($context->getVersion(),'1.0.1','<')){
+            $table = $setup->getConnection()->insert(
+                $setup->getTable('helloworldv2_item'),
+                [
+                    'name'=>'Item 1'
+                ]
+            );
 
-        $table = $setup->getConnection()->insert(
-            $setup->getTable('helloworldv2_item'),
-            [
-                'name'=>'Item 1'
-            ]
-        );
-
-        $table = $setup->getConnection()->insert(
-            $setup->getTable('helloworldv2_item'),
-            [
-                'name'=>'Item 2'
-            ]
-        );
-
+            $table = $setup->getConnection()->insert(
+                $setup->getTable('helloworldv2_item'),
+                [
+                    'name'=>'Item 2'
+                ]
+            );
+        }
         $setup->endSetup();
 
     }
