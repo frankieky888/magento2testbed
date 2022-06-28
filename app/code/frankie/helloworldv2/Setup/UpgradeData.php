@@ -9,7 +9,7 @@ class UpgradeData implements UpgradeDataInterface{
 public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context){
     $setup->startSetup();
 
-    if(version_compare($context->getVersion(),'1.0.1','<')){
+    if(version_compare($context->getVersion(),'1.0.2','<')){
 
 
         $setup->getConnection()->update(

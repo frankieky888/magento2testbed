@@ -9,16 +9,16 @@ class UpgradeSchema implements UpgradeSchemaInterface{
         $setup->startSetup();
 
 
-        if(version_compare($context->getVersion(),'1.0.1','<')){
+        if(version_compare($context->getVersion(),'1.0.2','<')){
         //add a column
-            $setup->getConnection->addColumn(
-            $setup->getTable('helloworldv2_item') ,   //tablename
-            'description',
-            [
-                'type'=>Table::TYPE_TEXT,
-                'nullable'=>true,
-                'comment'=>'Item description'
-            ]
+            $setup->getConnection()->addColumn(
+                $setup->getTable('helloworldv2_item') ,   //tablename
+                'description',
+                [
+                    'type'=>Table::TYPE_TEXT,
+                    'nullable'=>true,
+                    'comment'=>'Item description'
+                ]
             );
         }
         $setup->endSetup();
