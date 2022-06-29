@@ -1,4 +1,5 @@
 <?php
+
 namespace frankie\helloworldv2\Setup;
 
 use Magento\Framework\DB\Ddl\Table;
@@ -28,5 +29,6 @@ class UpgradeSchema implements UpgradeSchemaInterface{
     }
 
 }
+
 
 

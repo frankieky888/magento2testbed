@@ -8,7 +8,7 @@ use frankie\helloworldv2\Model\ResourceModel\Item\CollectionFactory;
 class Display extends Template{
 
     public function __construct(
-            Templete\Context $context,
+            Template\Context $context,
             CollectionFactory $collectionFactory,
             array $data =[]
     ){

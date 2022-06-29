@@ -10,7 +10,7 @@ use Magento\Framework\DB\Ddl\Table;
 class InstallSchema implements InstallSchemaInterface{
     public function install(SchemaSetupInterface $setup,ModuleContextInterface $context){
         $setup->startSetup();
-        if(version_compare($context->getVersion(),'1.0.1','<')){
+        if(version_compare($context->getVersion(),'1.0.1','<=')){
             $table = $setup->getConnection()->newTable(
                     $setup->getTable("helloworldv2_item")
             )->addColumn(
