@@ -1,7 +1,7 @@
 <?php 
-namespace Frankie\HelloWorldv2\Model\ResourceModel;
+namespace Frankie\HelloWorldv2\Model\ResourceModel\Item;
 
-use Magento\Catalog\Model\ResourceModel\AbstractCollection;
+use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Frankie\HelloWorldv2\Model\Item;
 use Frankie\HelloWorldv2\Model\ResourceModel\Item as ItemResource;
 

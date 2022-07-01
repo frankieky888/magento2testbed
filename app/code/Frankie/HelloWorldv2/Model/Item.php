@@ -2,11 +2,11 @@
 namespace Frankie\HelloWorldv2\Model;
 
 use Frankie\HelloWorldv2\Model\ResourceModel\Item as ResourceItem;
-use Magento\Sales\Model\AbstractModel;
+use Magento\Framework\Model\AbstractModel;
 
 class Item extends AbstractModel{
 
-    protected function __construct(){
+    protected function _construct(){
         $this->_init(ResourceItem::class);
     }
 
